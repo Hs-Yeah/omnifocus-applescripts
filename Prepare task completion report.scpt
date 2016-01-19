@@ -124,6 +124,7 @@ end if
 tell application "Evernote"
 	activate
 	set theReportDate to do shell script "date +%Y-%m-%d"
-	set theNote to create note notebook theNotebookName title theReportDate & " :: " & theNoteName with html theProgressDetail
+	set theTag to "OmniFocus"
+	set theNote to create note notebook theNotebookName title theReportDate & " :: " & theNoteName tags theTag with html theProgressDetail
 	open note window with theNote
 end tell
